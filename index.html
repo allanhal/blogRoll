@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Saira+Extra+Condensed:100" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="angular-bind-html-compile.min.js"></script>
 
     <link rel="stylesheet" href="index.css">
 
@@ -37,9 +38,7 @@
             <div class="my-4 post-image img-round" style="background-image: url('{{ post.urlImagem }}');"></div>
         </div>
         <div class="container container-max-width my-4">
-            <p class="my-5 text-justify">
-                {{post.texto}}
-            </p>
+            <div bind-html-compile="post.texto"></div>
             <hr>
         </div>
     </div>
@@ -51,7 +50,7 @@
 </body>
 
 <script>
-    angular.module('blogApp', []).controller('blogCtrl', function ($scope, $http) {
+    angular.module('blogApp', ['angular-bind-html-compile']).controller('blogCtrl', function ($scope, $http) {
         $http.get("https://rest-on-demand.herokuapp.com/api/Post/")
             .then(function (response) {
                 $scope.posts = response.data;
