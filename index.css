@@ -1,0 +1,54 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 150%;
+    color: #424b54;
+    line-height: 2;
+}
+
+.bo1 {
+    border: 1px solid black;
+}
+
+.color1 {
+    /* background-color: cadetblue; */
+    background-color: #93a8ac;
+}
+
+.color2 {
+    background-color: #2c3840;
+}
+
+.big-font {
+    font-size: 5em;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    /* color: #20a39e; */
+    color: #5bda9c;
+}
+
+.container-max-width {
+    max-width: 800px
+}
+
+h6 {
+    color: rgb(80, 102, 112);
+    font-style: italic
+}
+
+hr {
+    width: 90%;
+    background-color: white;
+    margin: 4%;
+}
+
+.post-image {
+    width: 90%;
+    margin: auto;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+}
+
+p {
+    margin: 5%;
+}
